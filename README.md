@@ -37,6 +37,6 @@ compile 'com.joe.animationtool:loadinglibrary:1.0.1'
  state.setSetting(StatuWidgetSetting)
  
 ```
-###（2）StatuWidgetSetting类里包含了 LoadingSetting类和NetworkSetting 类还有EmptySetting类分别是正在加载状态和加载失败状态和空状态的时候自定义设置，里面包含了设置相对应状态的一些参数的settter和getter，自行根据需要修改。
+### （2）StatuWidgetSetting类里包含了 LoadingSetting类和NetworkSetting 类还有EmptySetting类分别是正在加载状态和加载失败状态和空状态的时候自定义设置，里面包含了设置相对应状态的一些参数的settter和getter，自行根据需要修改。
 
 
