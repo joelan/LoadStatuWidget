@@ -50,24 +50,34 @@
        android:layout_height="wrap_content"
        android:layout_centerHorizontal="true"
        android:layout_centerVertical="true"
-       android:text="Button" />
+       android:text="正在加载布局" />
 
    <Button
        android:id="@+id/button2"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:layout_alignEnd="@+id/button"
+android:layout_centerHorizontal="true"
        android:layout_below="@+id/button"
        android:layout_marginTop="22dp"
-       android:text="Button" />
+       android:text="网络错误布局" />
 
    <Button
        android:id="@+id/button3"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:layout_alignEnd="@+id/button2"
+       android:layout_centerHorizontal="true"
        android:layout_below="@+id/button2"
        android:layout_marginTop="25dp"
-       android:text="Button" />
+       android:text="正常布局" />
+
+   <Button
+       android:id="@+id/button4"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+
+       android:layout_centerHorizontal="true"
+       android:layout_below="@+id/button3"
+       android:layout_marginTop="25dp"
+       android:text="空数据布局" />
 
 </RelativeLayout>

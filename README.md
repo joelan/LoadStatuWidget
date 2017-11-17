@@ -1,4 +1,10 @@
 # 加载状态布局切换工具
+
+![image](https://github.com/joelan/LoadStatuWidget/raw/master/screenshoot/1.png)
+![image](https://github.com/joelan/LoadStatuWidget/raw/master/screenshoot/2.png)
+![image](https://github.com/joelan/LoadStatuWidget/raw/master/screenshoot/3.png)
+![image](https://github.com/joelan/LoadStatuWidget/raw/master/screenshoot/4.png)
+
 ## 1.依赖
 ### 依赖库分发在Jcenter。
 ```java
@@ -8,7 +14,7 @@
    }
 
 dependencies {
-compile 'com.joe.animationtool:loadinglibrary:1.0.0'
+compile 'com.joe.animationtool:loadinglibrary:1.0.1'
 }
 ```
 
@@ -28,12 +34,11 @@ compile 'com.joe.animationtool:loadinglibrary:1.0.0'
 ```
 
 ## 3.自定义设置
-（1）通过设置StatuWidgetSetting类到LoadingStateWidget
+### （1）通过设置StatuWidgetSetting类到LoadingStateWidget
 ```java
  state.setSetting(StatuWidgetSetting)
  
 ```
-（2）StatuWidgetSetting类里包含了 LoadingSetting类和
- NetworkSetting 类分别设置正在加载状态和加载失败状态，分别设置里面的成员变量值来自定义状态布局。
+###（2）StatuWidgetSetting类里包含了 LoadingSetting类和NetworkSetting 类还有EmptySetting类分别是正在加载状态和加载失败状态和空状态的时候自定义设置，里面包含了设置相对应状态的一些参数的settter和getter，自行根据需要修改。
 
 

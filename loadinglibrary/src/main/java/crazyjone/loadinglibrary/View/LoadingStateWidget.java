@@ -108,7 +108,7 @@ public class LoadingStateWidget {
 
        // context.getResources().getIdentifier("loading","layout",context.getPackageName());
 
-        View loadingview= LayoutInflater.from(context).inflate(R.layout.loading,null);
+        View loadingview= LayoutInflater.from(context).inflate(context.getResources().getIdentifier("loading","layout",context.getPackageName()),null);
 
 
         ProgressBar progress= (ProgressBar) loadingview.findViewById(R.id.progressBar);
@@ -152,7 +152,6 @@ public class LoadingStateWidget {
 
         }
 
-
         StateView=loadingview;
         relativeLayout.addView(loadingview,new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,RelativeLayout.LayoutParams.MATCH_PARENT));
 
@@ -183,7 +182,7 @@ public class LoadingStateWidget {
         relativeLayout.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,RelativeLayout.LayoutParams.MATCH_PARENT));
         relativeLayout.addView(rootview,new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,RelativeLayout.LayoutParams.MATCH_PARENT));
 
-        View loadingview= LayoutInflater.from(context).inflate(R.layout.networkerror,null);
+        View loadingview= LayoutInflater.from(context).inflate(context.getResources().getIdentifier("networkerror","layout",context.getPackageName()),null);
 
         LinearLayout network_error_contaner= (LinearLayout) loadingview.findViewById(R.id.network_error_contaner);
 
@@ -216,12 +215,6 @@ public class LoadingStateWidget {
 
         }
 
-
-
-
-
-
-
         icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -240,6 +233,84 @@ public class LoadingStateWidget {
         StateView.setVisibility(View.VISIBLE);
 
     }
+
+
+    public  void  emptyState()
+    {
+        if(context==null&&viewcontainer==null)
+            return ;
+       /* normalState();
+        rootview = getRootView(context);
+
+        parentview = (ViewGroup) rootview.getParent();*/
+
+        normalState();
+
+        if(parentview!=null)
+            parentview.removeView(rootview);
+        relativeLayout =new RelativeLayout(context);
+        relativeLayout.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,RelativeLayout.LayoutParams.MATCH_PARENT));
+        relativeLayout.addView(rootview,new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,RelativeLayout.LayoutParams.MATCH_PARENT));
+
+        View loadingview= LayoutInflater.from(context).inflate(context.getResources().getIdentifier("empty","layout",context.getPackageName()),null);
+
+        LinearLayout empty_contaner= (LinearLayout) loadingview.findViewById(R.id.empty_contaner);
+
+        TextView empty_tips=(TextView)loadingview.findViewById(R.id.empty_tips);
+
+
+        ImageView  icon= (ImageView) loadingview.findViewById(R.id.empty_iocn);
+
+        if(setting!=null&&setting.getEmptySetting()!=null)
+        {
+
+            if(setting.getEmptySetting().getBagroundcolor()!=0)
+            {
+                empty_contaner.setBackgroundColor(context.getResources().getColor(setting.getEmptySetting().getBagroundcolor()));
+            }
+
+            if(!TextUtils.isEmpty(setting.getEmptySetting().getEmpty_str()))
+            {
+                empty_tips.setText(setting.getEmptySetting().getEmpty_str());
+            }
+
+            if(setting.getEmptySetting().isShwicon()) {
+                icon.setVisibility(View.VISIBLE);
+                if (setting.getEmptySetting().getEmpty_image_res() != 0) {
+                    icon.setImageResource(setting.getEmptySetting().getEmpty_image_res());
+                }
+
+                icon.setLayoutParams(new LinearLayout.LayoutParams(
+                        setting.getEmptySetting().getEmpty_image_width() == 0 ? LinearLayout.LayoutParams.WRAP_CONTENT : setting.getEmptySetting().getEmpty_image_width(),
+                        setting.getEmptySetting().getEmpty_image_height() == 0 ? LinearLayout.LayoutParams.WRAP_CONTENT : setting.getEmptySetting().getEmpty_image_height()));
+
+            }
+            else
+            {
+                icon.setVisibility(View.GONE);
+            }
+        }
+
+    /*    icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(retryListener!=null)
+                    retryListener.onRetry();
+            }
+        });*/
+        StateView=loadingview;
+        relativeLayout.addView(loadingview,new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,RelativeLayout.LayoutParams.MATCH_PARENT));
+        if(viewcontainer==null)
+            parentview.addView(relativeLayout);
+        else
+        {
+            parentview.addView(relativeLayout,containerlp);
+        }
+        StateView.setVisibility(View.VISIBLE);
+
+    }
+
+
 
     public  void normalState() {
         if(context==null&&viewcontainer==null)

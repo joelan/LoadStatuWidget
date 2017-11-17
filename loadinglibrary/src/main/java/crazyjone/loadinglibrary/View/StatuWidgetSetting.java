@@ -8,6 +8,15 @@ public class StatuWidgetSetting {
 
     LoadingSetting  loadingSetting;
     NetworkSetting networkSetting;
+    EmptySetting  emptySetting;
+
+    public EmptySetting getEmptySetting() {
+        return emptySetting;
+    }
+
+    public void setEmptySetting(EmptySetting emptySetting) {
+        this.emptySetting = emptySetting;
+    }
 
     public LoadingSetting getLoadingSetting() {
         return loadingSetting;
@@ -161,6 +170,76 @@ public class StatuWidgetSetting {
         private   int  network_image_width;
         private   int network_image_height;
 
+    }
+
+    class EmptySetting
+    {
+        public boolean isShwicon() {
+            return isShowicon;
+        }
+
+        public void setShwicon(boolean shwicon) {
+            isShowicon = shwicon;
+        }
+
+        public  EmptySetting(int bagroundcolor, int empty_image_res, String  empty_str, int  empty_image_width, int empty_image_height, boolean isShwicon)
+        {
+
+            this.bagroundcolor=bagroundcolor;
+            this.empty_image_res=empty_image_res;
+            this.empty_str=empty_str;
+            this.empty_image_width=empty_image_width;
+            this.empty_image_height=empty_image_height;
+            this.isShowicon=isShwicon;
+
+
+        }
+        public int getBagroundcolor() {
+            return bagroundcolor;
+        }
+
+        public void setBagroundcolor(int bagroundcolor) {
+            this.bagroundcolor = bagroundcolor;
+        }
+
+        public int getEmpty_image_res() {
+            return empty_image_res;
+        }
+
+        public void setEmpty_image_res(int empty_image_res) {
+            this.empty_image_res = empty_image_res;
+        }
+
+        public String getEmpty_str() {
+            return empty_str;
+        }
+
+        public void setEmpty_str(String empty_str) {
+            this.empty_str = empty_str;
+        }
+
+        public int getEmpty_image_width() {
+            return empty_image_width;
+        }
+
+        public void setEmpty_image_width(int empty_image_width) {
+            this.empty_image_width = empty_image_width;
+        }
+
+        public int getEmpty_image_height() {
+            return empty_image_height;
+        }
+
+        public void setEmpty_image_height(int empty_image_height) {
+            this.empty_image_height = empty_image_height;
+        }
+
+        private   int bagroundcolor;
+        private   int empty_image_res;
+        private   String  empty_str;
+        private   int  empty_image_width;
+        private   int empty_image_height;
+        private  boolean isShowicon=true;
     }
 }
 
