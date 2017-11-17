@@ -19,15 +19,27 @@ compile 'com.joe.animationtool:loadinglibrary:1.0.1'
 ## 2.使用
 
 ```java
-
-    //1.contain要显示加载状态，网络状态的容器布局
+     //1.初始化工具并attach 容器布局，
+      //contain要显示当前加载状态的容器布局
         LoadingStateWidget   state=new LoadingStateWidget();
         state.Attach(contain);
         
-       //也可以直接Attach  当前Activity.
+       //也可以直接Attach  关联activity，会自动找出Activity容器布局，
          LoadingStateWidget   state=new LoadingStateWidget();
         state.Attach(Activity);
         
+       //2.
+       //改变当前布局为正在加载状态
+       state.loadingState();
+       
+        //改变当前容器布局为网络错误状态（一般没网，连接失败的情况下）
+       state.networkState();
+       
+      //改变当前容器布局为空数据状态
+         state.emptyState();
+         
+        //恢复原来的正常布局状态
+       state.normalState();
 
 ```
 
