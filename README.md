@@ -1,10 +1,8 @@
 # 加载状态布局切换工具
-
 ![image](https://github.com/joelan/LoadStatuWidget/raw/master/screenshoot/1.png)
 ![image](https://github.com/joelan/LoadStatuWidget/raw/master/screenshoot/2.png)
 ![image](https://github.com/joelan/LoadStatuWidget/raw/master/screenshoot/3.png)
 ![image](https://github.com/joelan/LoadStatuWidget/raw/master/screenshoot/4.png)
-
 ## 1.依赖
 ### 依赖库分发在Jcenter。
 ```java
