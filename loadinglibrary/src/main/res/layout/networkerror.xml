@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center"
+    android:id="@+id/network_error_contaner"
+    android:background="#ffffff"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/network_iocn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/network"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="@string/network_error"
+        android:padding="10dp"
+        android:id="@+id/network_tips"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+</LinearLayout>

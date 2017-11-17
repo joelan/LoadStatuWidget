@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LoadingLibrary</string>
+    <string name="network_error">网络错误，点击重试</string>
+    <string name="loading">正在加载...</string>
+</resources>
