@@ -42,7 +42,7 @@ compile 'com.joe.animationtool:loadinglibrary:1.0.1'
        state.normalState();
        
        
-       3.//网络错误，点击布局重试回调
+     // 3.网络错误，点击布局重试回调
       state.setRetryListener(RetryListener retryListener) 
        
 
