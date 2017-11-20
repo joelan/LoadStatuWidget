@@ -40,6 +40,11 @@ compile 'com.joe.animationtool:loadinglibrary:1.0.1'
          
         //恢复原来的正常布局状态
        state.normalState();
+       
+       
+       3.//网络错误，点击布局重试回调
+      state.setRetryListener(RetryListener retryListener) 
+       
 
 ```
 
