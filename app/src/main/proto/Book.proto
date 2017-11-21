@@ -1,0 +1,8 @@
+syntax = "proto2";
+option java_package = "net.angrycode.bean";
+package bean;
+message Book {
+    required int32 id = 1;
+    required string name = 2;
+    optional string desc = 3;
+}

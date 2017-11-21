@@ -143,6 +143,15 @@ public class LoadingStateWidget {
             {
                 loading_str.setText(setting.getLoadingSetting().getLoadingstr());
             }
+            if(setting.getLoadingSetting().getTextcolorres()!=0)
+            {
+                loading_str.setTextColor(context.getResources().getColor(setting.getLoadingSetting().getTextcolorres()));
+            }
+            if(setting.getLoadingSetting().getTextsize()!=0)
+            {
+                loading_str.setTextSize(setting.getLoadingSetting().getTextsize());
+            }
+
 
 
 
@@ -212,6 +221,16 @@ public class LoadingStateWidget {
             icon.setLayoutParams(new LinearLayout.LayoutParams(
                     setting.getNetworkSetting().getNetwork_image_width()==0?LinearLayout.LayoutParams.WRAP_CONTENT:setting.getNetworkSetting().getNetwork_image_width(),
                     setting.getNetworkSetting().getNetwork_image_height()==0?LinearLayout.LayoutParams.WRAP_CONTENT:setting.getNetworkSetting().getNetwork_image_height()));
+
+            if(setting.getNetworkSetting().getTextcolorres()!=0)
+            {
+                network_tips.setTextColor(context.getResources().getColor(setting.getNetworkSetting().getTextcolorres()));
+            }
+            if(setting.getNetworkSetting().getTextsize()!=0)
+            {
+                network_tips.setTextSize(setting.getNetworkSetting().getTextsize());
+            }
+
 
         }
 
@@ -288,6 +307,16 @@ public class LoadingStateWidget {
             else
             {
                 icon.setVisibility(View.GONE);
+            }
+
+
+            if(setting.getEmptySetting().getTextcolorres()!=0)
+            {
+                empty_tips.setTextColor(context.getResources().getColor(setting.getNetworkSetting().getTextcolorres()));
+            }
+            if(setting.getEmptySetting().getTextsize()!=0)
+            {
+                empty_tips.setTextSize(setting.getNetworkSetting().getTextsize());
             }
         }
 

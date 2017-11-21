@@ -13,4 +13,5 @@ public interface Api {
 
     @GET("v2/movie/top250")
     Call<TopRankModel> moiveTopRank(@Query("start") int start, @Query("count") int count);
+
 }

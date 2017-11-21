@@ -100,6 +100,25 @@ public class StatuWidgetSetting {
         private int  loading_image_width;
         private  int loading_image_height;
 
+        public float getTextsize() {
+            return textsize;
+        }
+
+        public void setTextsize(float textsize) {
+            this.textsize = textsize;
+        }
+
+        public int getTextcolorres() {
+            return textcolorres;
+        }
+
+        public void setTextcolorres(int textcolorres) {
+            this.textcolorres = textcolorres;
+        }
+
+        private   float textsize;
+        private   int textcolorres;
+
 
     }
 
@@ -166,9 +185,29 @@ public class StatuWidgetSetting {
 
         private   int bagroundcolor;
         private   int network_image_res;
+
+        public float getTextsize() {
+            return textsize;
+        }
+
+        public void setTextsize(float textsize) {
+            this.textsize = textsize;
+        }
+
+        public int getTextcolorres() {
+            return textcolorres;
+        }
+
+        public void setTextcolorres(int textcolorres) {
+            this.textcolorres = textcolorres;
+        }
+
         private   String  network_str;
         private   int  network_image_width;
         private   int network_image_height;
+
+        private   float textsize;
+        private   int textcolorres;
 
     }
 
@@ -234,9 +273,28 @@ public class StatuWidgetSetting {
             this.empty_image_height = empty_image_height;
         }
 
+        public float getTextsize() {
+            return textsize;
+        }
+
+        public void setTextsize(float textsize) {
+            this.textsize = textsize;
+        }
+
+        public int getTextcolorres() {
+            return textcolorres;
+        }
+
+        public void setTextcolorres(int textcolorres) {
+            this.textcolorres = textcolorres;
+        }
+
         private   int bagroundcolor;
         private   int empty_image_res;
         private   String  empty_str;
+
+        private   float textsize;
+        private   int textcolorres;
         private   int  empty_image_width;
         private   int empty_image_height;
         private  boolean isShowicon=true;

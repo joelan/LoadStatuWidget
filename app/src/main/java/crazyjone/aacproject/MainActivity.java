@@ -11,6 +11,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import net.angrycode.bean.BookOuterClass;
+
 import crazyjone.aacproject.Interface.Api;
 import crazyjone.aacproject.LiveData.NameViewModel;
 import crazyjone.aacproject.Services.GetServices;
@@ -138,6 +140,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 */
+
+
+
+/*
+        BookOuterClass.Book book = BookOuterClass.Book.newBuilder()
+                .setId(1)
+                .setName("Prime")
+                .setDesc("Code Book")
+                .build();
+*/
+
+        BookOuterClass.Book book=BookOuterClass.Book.newBuilder()
+                .setDesc("Code book")
+                .setId(1)
+                .setName("Prime")
+                .build();
+
+
+
+
+
 
 
 

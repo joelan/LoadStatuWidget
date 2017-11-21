@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.google.protobuf'
 android {
     compileSdkVersion 24
     buildToolsVersion "26.0.1"
@@ -27,6 +27,39 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    sourceSets {
+        main {
+            proto {
+                srcDir 'src/main/proto'
+                include '**/*.proto'
+            }
+            java {
+                srcDir 'src/main/java'
+            }
+        }
+    }
+
+}
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc:3.1.0'
+    }
+
+    generateProtoTasks {
+        all().each { task ->
+            task.builtins {
+                remove java
+            }
+            task.builtins {
+                java {}
+                // Add cpp output without any option.
+                // DO NOT omit the braces if you want this builtin to be added.
+                cpp {}
+            }
+        }
+    }
+
+    generatedFilesBaseDir = "$projectDir/src/generated"
 }
 
 
@@ -51,5 +84,9 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:recyclerview-v7:24.2.1'
+
+
+    compile 'com.google.protobuf:protobuf-java:3.1.0'
+    compile 'com.google.protobuf:protoc:3.1.0'
     compile project(':loadinglibrary')
 }

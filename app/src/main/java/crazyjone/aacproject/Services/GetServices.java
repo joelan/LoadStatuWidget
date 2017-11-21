@@ -12,12 +12,10 @@ public class GetServices {
 
     public static Retrofit getMainHost()
     {
-
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.douban.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-
       return   retrofit;
     }
 }

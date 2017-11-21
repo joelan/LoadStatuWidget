@@ -12,6 +12,7 @@ import retrofit2.Response;
  * Created by Administrator on 2017/11/16.
  */
 
+@Deprecated
 public abstract class ApiResponse<T> implements Call<T> {
 
 

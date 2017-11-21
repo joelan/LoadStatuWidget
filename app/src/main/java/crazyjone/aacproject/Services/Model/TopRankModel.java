@@ -395,7 +395,6 @@ public class TopRankModel {
                  * large : https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p230.webp
                  * medium : https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p230.webp
                  */
-
                 private String small;
                 private String large;
                 private String medium;
