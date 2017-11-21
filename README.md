@@ -3,6 +3,9 @@
 ![image](https://github.com/joelan/LoadStatuWidget/raw/master/screenshoot/2.png)
 ![image](https://github.com/joelan/LoadStatuWidget/raw/master/screenshoot/3.png)
 ![image](https://github.com/joelan/LoadStatuWidget/raw/master/screenshoot/4.png)
+##版本更新说明
+1.0.2版本添加了提示文字的大小和颜色
+
 ## 1.依赖
 ### 依赖库分发在Jcenter。
 ```java
@@ -12,7 +15,7 @@
    }
 
 dependencies {
-compile 'com.joe.animationtool:loadinglibrary:1.0.1'
+compile 'com.joe.animationtool:loadinglibrary:1.0.2'
 }
 ```
 
