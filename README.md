@@ -1,4 +1,6 @@
 # 加载状态布局切换工具
+[ ![Download](https://api.bintray.com/packages/joelan/maven/LoadWidget/images/download.svg) ](https://bintray.com/joelan/maven/LoadWidget/_latestVersion)
+
 ![image](https://github.com/joelan/LoadStatuWidget/raw/master/screenshoot/1.png)
 ![image](https://github.com/joelan/LoadStatuWidget/raw/master/screenshoot/2.png)
 ![image](https://github.com/joelan/LoadStatuWidget/raw/master/screenshoot/3.png)
