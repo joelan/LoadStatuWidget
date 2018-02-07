@@ -34,7 +34,7 @@ public class StatuWidgetSetting {
         this.networkSetting = networkSetting;
     }
 
-  public   class LoadingSetting
+  public  static class LoadingSetting
     {
 
         /**
@@ -122,7 +122,7 @@ public class StatuWidgetSetting {
 
     }
 
-    public  class NetworkSetting
+    public static class NetworkSetting
     {
 
         /**
@@ -211,7 +211,7 @@ public class StatuWidgetSetting {
 
     }
 
-    public class EmptySetting
+    public static class EmptySetting
     {
         public boolean isShwicon() {
             return isShowicon;

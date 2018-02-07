@@ -18,6 +18,7 @@ import crazyjone.aacproject.LiveData.NameViewModel;
 import crazyjone.aacproject.Services.GetServices;
 import crazyjone.aacproject.Services.Model.TopRankModel;
 import crazyjone.loadinglibrary.View.LoadingStateWidget;
+import crazyjone.loadinglibrary.View.StatuWidgetSetting;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         state=new LoadingStateWidget();
         state.Attach(contain);
-
+        StatuWidgetSetting.NetworkSetting networkSetting=new StatuWidgetSetting.NetworkSetting(0,0,"",0,0);
 
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
