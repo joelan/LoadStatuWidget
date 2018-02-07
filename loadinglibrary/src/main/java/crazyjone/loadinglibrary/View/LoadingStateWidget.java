@@ -168,7 +168,9 @@ public class LoadingStateWidget {
         parentview.addView(relativeLayout);
        else
         {
-            parentview.addView(relativeLayout,containerlp);
+          //  parentview.addView(relativeLayout,containerlp);
+            relativeLayout.setLayoutParams(containerlp);
+            parentview.addView(relativeLayout,position);
         }
         StateView.setVisibility(View.VISIBLE);
 
@@ -247,7 +249,8 @@ public class LoadingStateWidget {
             parentview.addView(relativeLayout);
         else
         {
-            parentview.addView(relativeLayout,containerlp);
+            relativeLayout.setLayoutParams(containerlp);
+            parentview.addView(relativeLayout,position);
         }
         StateView.setVisibility(View.VISIBLE);
 
@@ -333,7 +336,8 @@ public class LoadingStateWidget {
             parentview.addView(relativeLayout);
         else
         {
-            parentview.addView(relativeLayout,containerlp);
+            relativeLayout.setLayoutParams(containerlp);
+            parentview.addView(relativeLayout,position);
         }
         StateView.setVisibility(View.VISIBLE);
 
@@ -352,7 +356,10 @@ public class LoadingStateWidget {
             parentview.addView(rootview, 0);
             else
             {
-             parentview.addView(rootview,containerlp);
+            // parentview.addView(rootview,containerlp);
+                rootview.setLayoutParams(containerlp);
+                parentview.addView(rootview,position);
+
             }
             StateView = null;
             relativeLayout = null;
