@@ -18,7 +18,7 @@
    }
 
 dependencies {
-compile 'com.joe.animationtool:loadinglibrary:1.0.3'
+compile 'com.joe.animationtool:loadinglibrary:1.0.5'
 }
 ```
 
