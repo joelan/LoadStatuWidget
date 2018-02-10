@@ -23,6 +23,7 @@ public class LoadingStateWidget {
 
     StatuWidgetSetting setting;
 
+    boolean isicon_retry=false;
     public StatuWidgetSetting getSetting() {
         return setting;
     }
@@ -32,6 +33,14 @@ public class LoadingStateWidget {
     }
 
     Context context;
+
+    public boolean isiconretry() {
+        return isicon_retry;
+    }
+
+    public void setIsiconretry(boolean isiconretry) {
+        this.isicon_retry = isiconretry;
+    }
 
     ViewGroup rootview;
     ViewGroup parentview;
@@ -236,13 +245,25 @@ public class LoadingStateWidget {
 
         }
 
-        icon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(retryListener!=null)
-                    retryListener.onRetry();
-            }
-        });
+        if(isicon_retry) {
+            icon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (retryListener != null)
+                        retryListener.onRetry();
+                }
+            });
+        }
+        else
+        {
+            loadingview.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (retryListener != null)
+                        retryListener.onRetry();
+                }
+            });
+        }
         StateView=loadingview;
         relativeLayout.addView(loadingview,new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,RelativeLayout.LayoutParams.MATCH_PARENT));
         if(viewcontainer==null)

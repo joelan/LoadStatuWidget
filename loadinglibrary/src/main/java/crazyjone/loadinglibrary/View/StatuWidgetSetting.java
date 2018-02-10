@@ -10,6 +10,7 @@ public class StatuWidgetSetting {
     NetworkSetting networkSetting;
     EmptySetting  emptySetting;
 
+
     public EmptySetting getEmptySetting() {
         return emptySetting;
     }
