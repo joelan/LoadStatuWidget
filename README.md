@@ -9,6 +9,7 @@
 ### 1.0.2版本添加了提示文字的大小和颜色
 ### 1.0.3版本修复位置偏移问题
 ### 1.0.4版本修复自定义选项不可设置的问题
+### 1.0.7版本增加整页点击重试和重试按钮重试两种方式。
 ## 1.依赖
 ### 依赖库分发在Jcenter。
 ```java
@@ -18,7 +19,7 @@
    }
 
 dependencies {
-compile 'com.joe.animationtool:loadinglibrary:1.0.6'
+compile 'com.joe.animationtool:loadinglibrary:1.0.7'
 }
 ```
 

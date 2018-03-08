@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -208,6 +209,7 @@ public class LoadingStateWidget {
 
         TextView network_tips=(TextView)loadingview.findViewById(R.id.network_tips);
 
+        Button retry=(Button)loadingview.findViewById(R.id.retry);
 
         ImageView  icon= (ImageView) loadingview.findViewById(R.id.network_iocn);
 
@@ -246,7 +248,8 @@ public class LoadingStateWidget {
         }
 
         if(isicon_retry) {
-            icon.setOnClickListener(new View.OnClickListener() {
+            retry.setVisibility(View.VISIBLE);
+            retry.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (retryListener != null)
@@ -256,6 +259,7 @@ public class LoadingStateWidget {
         }
         else
         {
+            retry.setVisibility(View.GONE);
             loadingview.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
