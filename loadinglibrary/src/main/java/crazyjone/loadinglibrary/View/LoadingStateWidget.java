@@ -2,6 +2,7 @@ package crazyjone.loadinglibrary.View;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.drawable.AnimationDrawable;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -133,6 +134,17 @@ public class LoadingStateWidget {
                 progress.setVisibility(View.GONE);
                 loading_icon.setVisibility(View.VISIBLE);
                 loading_icon.setImageResource(setting.getLoadingSetting().getLoading_iamge_res());
+
+                try {
+
+              AnimationDrawable animationDrawable= (AnimationDrawable) loading_icon.getDrawable();
+              if(animationDrawable!=null)
+                  animationDrawable.start();
+
+                }catch (Throwable e)
+                {
+                    e.printStackTrace();
+                }
 
 
                 loading_icon.setLayoutParams(new RelativeLayout.LayoutParams(

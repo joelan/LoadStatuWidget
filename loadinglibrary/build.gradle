@@ -20,7 +20,7 @@ android {
     }
 }
 
-version = "1.0.7"
+version = "1.0.8"
 group='com.joe.animationtool'
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
