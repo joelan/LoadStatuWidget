@@ -64,5 +64,23 @@ compile 'com.joe.animationtool:loadinglibrary:1.0.7'
 ### （2）StatuWidgetSetting类里包含了 LoadingSetting类和NetworkSetting 类还有EmptySetting类分别是正在加载状态和加载失败状态和空状态的时候自定义设置，里面包含了设置相对应状态的一些参数的settter和getter，自行根据需要修改。
 ###  里面提到的color 是R.color.xxx 这样的值，textsize是sp单位。
 
+### （3）完整例子
+```java
+         LoadingStateWidget   state=new LoadingStateWidget();
+          state.Attach(contain);
+
+             StatuWidgetSetting setting;
+                if(state.getSetting()==null)
+                    setting=new StatuWidgetSetting();
+                else
+                    setting=state.getSetting();
+                StatuWidgetSetting.NetworkSetting network=new StatuWidgetSetting.NetworkSetting(R.color.white,R.drawable.networkicon,"网络出错",DisplayUtils.dp2px(context,50),DisplayUtils.dp2px(context,50));
+                setting.setNetworkSetting(network);
+                state.setSetting(setting);
+
+                   state.networkState();
+
+```
+
 
 

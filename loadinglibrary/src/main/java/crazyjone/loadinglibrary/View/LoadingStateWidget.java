@@ -150,6 +150,10 @@ public class LoadingStateWidget {
                 loading_icon.setLayoutParams(new RelativeLayout.LayoutParams(
                         setting.getLoadingSetting().getLoading_image_width()==0?RelativeLayout.LayoutParams.WRAP_CONTENT:setting.getLoadingSetting().getLoading_image_width(),
                         setting.getLoadingSetting().getLoading_image_height()==0?RelativeLayout.LayoutParams.WRAP_CONTENT:setting.getLoadingSetting().getLoading_image_height()));
+
+                RelativeLayout.LayoutParams lp= (RelativeLayout.LayoutParams) loading_icon.getLayoutParams();
+                lp.addRule(RelativeLayout.CENTER_IN_PARENT);
+                loading_icon.setLayoutParams(lp);
             }
             else
             {

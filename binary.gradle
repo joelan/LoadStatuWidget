@@ -6,7 +6,7 @@ def gitUrl = 'https://github.com/joelan/LoadStatuWidget'	//Git repository url
 def issueUrl = 'https://github.com/joelan/LoadStatuWidget/issues'	//issue url of the library
 
 
-def versionx="1.0.8"
+def versionx="1.0.9"
 
 def inception = '2017'
 def userid = 'joelan'
