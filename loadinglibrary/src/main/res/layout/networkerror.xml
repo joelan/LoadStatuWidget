@@ -19,6 +19,7 @@
         android:layout_width="match_parent"
         android:text="@string/network_error"
         android:padding="10dp"
+      android:textColor="#4d4c4c"
         android:id="@+id/network_tips"
         android:gravity="center"
         android:layout_height="wrap_content" />
@@ -26,6 +27,7 @@
     <Button
         android:layout_width="wrap_content"
         android:text="重试"
+        android:textColor="#4d4c4c"
         android:id="@+id/retry"
         android:visibility="gone"
         android:background="@drawable/rect"

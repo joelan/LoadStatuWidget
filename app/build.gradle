@@ -71,7 +71,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta2'
+  //  compile 'com.android.support.constraint:constraint-layout:1.0.0-beta2'
     //For LiveData, and ViewModel,
     compile 'android.arch.lifecycle:extensions:1.0.0'
     //for lifecycle

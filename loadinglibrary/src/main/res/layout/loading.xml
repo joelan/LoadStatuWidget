@@ -32,6 +32,7 @@
         android:layout_width="match_parent"
         android:text="@string/loading"
         android:id="@+id/loading_str"
+        android:textColor="#4d4c4c"
         android:padding="10dp"
         android:textSize="20sp"
         android:gravity="center"
