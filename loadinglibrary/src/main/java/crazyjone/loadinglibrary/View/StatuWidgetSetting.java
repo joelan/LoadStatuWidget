@@ -210,6 +210,26 @@ public class StatuWidgetSetting {
         private   float textsize;
         private   int textcolorres;
 
+        public String getButtontxt() {
+            return buttontxt;
+        }
+
+        public void setButtontxt(String buttontxt) {
+            this.buttontxt = buttontxt;
+        }
+
+        public int getButtonbg() {
+            return buttonbg;
+        }
+
+        public void setButtonbg(int buttonbg) {
+            this.buttonbg = buttonbg;
+        }
+
+        private  String buttontxt;
+        private  int buttonbg;
+
+
     }
 
     public static class EmptySetting

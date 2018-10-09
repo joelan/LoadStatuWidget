@@ -261,6 +261,19 @@ public class LoadingStateWidget {
             }
 
 
+            if(!TextUtils.isEmpty(setting.getNetworkSetting().getButtontxt()))
+            {
+
+                retry.setText(setting.getNetworkSetting().getButtontxt());
+            }
+
+            if(setting.getNetworkSetting().getButtonbg()!=0)
+            {
+
+                retry.setBackgroundResource(setting.getNetworkSetting().getButtonbg());
+            }
+
+
         }
 
         if(isicon_retry) {
